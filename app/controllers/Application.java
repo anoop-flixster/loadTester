@@ -1,6 +1,10 @@
 
 package controllers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import javax.annotation.Nullable;
 
 import play.libs.F.Function;
@@ -44,6 +48,11 @@ public class Application extends Controller {
         responsePromise.get(30000);
 
         return ok("Success ! You made a blocking sync IO call.");
+    }
+
+    public static Result loader() throws FileNotFoundException {
+        return ok(new FileInputStream(new File(
+                "loader/loaderio-089101384debff7039e98793fbaa231a.txt")));
     }
 
     private static WSRequestHolder prepareWsRequestWithQueryParam(@Nullable final Integer delay) {
