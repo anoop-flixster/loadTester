@@ -47,7 +47,8 @@ public class Application extends Controller {
     }
 
     private static WSRequestHolder prepareWsRequestWithQueryParam(@Nullable final Integer delay) {
-        final WSRequestHolder wsRequest = WS.url(THIRD_PARTY_WS_HEROKU_URL);
+        // Use a connection timeout of 30,000 ms or 30 seconds
+        final WSRequestHolder wsRequest = WS.url(THIRD_PARTY_WS_HEROKU_URL).setTimeout(30000);
 
         if (delay != null) {
             wsRequest.setQueryParameter("delay", delay.toString());
