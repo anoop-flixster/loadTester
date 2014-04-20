@@ -2,7 +2,7 @@
 # Java applications with deep visibility and low overhead.  For more details and additional
 # configuration options visit https://docs.newrelic.com/docs/java/java-agent-configuration.
 #
-# This configuration file is custom generated for Flixster_1
+# This configuration file is custom generated for app24358752@heroku.com
 #
 # This section is for settings common to all environments.
 # Do not add anything above this next line.
@@ -12,7 +12,7 @@ common: &default_settings
   # You must specify the license key associated with your New Relic
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
-  license_key: '75119196af01739d67d793b23f9a43a82f0cbdf7'
+  license_key: 'fcd350a5c6bc0be9c9ad21a7b9451d1770d87a23'
 
   # Agent Enabled
   # Use this setting to disable the agent instead of removing it from the startup command.
